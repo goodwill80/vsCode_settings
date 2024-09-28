@@ -1,0 +1,30 @@
+{
+  "files.eol": "\n", // lf
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "terminal.integrated.env.windows": {},
+  "files.associations": {
+    ".env*": "dotenv"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
+      }
+    ]
+  },
+  "workbench.colorTheme": "Visual Studio Dark",
+  "console-ninja.featureSet": "Community",
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // prettier code formatter
+  "notebook.defaultFormatter": "esbenp.prettier-vscode", // prettier code formater
+  "editor.formatOnSave": true
+}
+
+// Batch conversion of lf formater in window powershell
+// Get-ChildItem -Recurse -File | ForEach-Object {
+//     (Get-Content -Raw -Path $_.FullName) -replace "`r`n", "`n" | Set-Content -NoNewline -Path $_.FullName
+// }
